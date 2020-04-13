@@ -95,25 +95,39 @@ Node.js, Memcached, and Redis installed through Homebrew are known to work:
     $ git clone git://github.com/tammybutow/ChaosQuest.git
     $ cd ChaosQuest
     $ npm install -d
-    $ node server/js/main.js
 
-Or you can download the latest Redis source from http://redis.io/download
+Gremlin installed through Docker for Mac is known to work:
+ 
+    
+1. You will need to set your Gremlin Team ID and Secret as environment variables
+2. Navigate to [https://gremlin.com/buttons](gremlin.com/buttons) and sign up for a Gremlin account
+3. You will find your Gremlin Team ID and Secret in [Settings](https://app.gremlin.com/settings/teams).
 
-    $ tar xzf redis-<version>.tar.gz
-    $ cd redis-<version>
-    $ make
+    $ export GREMLIN_TEAM_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+    $ export GREMLIN_TEAM_SECRET=XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX
+    
+Run Gremlin in a Docker container after installing Docker for Mac:
+
+    $ docker run -d --net=host \
+    --cap-add=NET_ADMIN --cap-add=SYS_BOOT --cap-add=SYS_TIME \
+    --cap-add=KILL \
+    -v $PWD/var/lib/gremlin:/var/lib/gremlin \
+    -v $PWD/var/log/gremlin:/var/log/gremlin \
+    -v /var/run/docker.sock:/var/run/docker.sock \
+    -e GREMLIN_TEAM_ID="$GREMLIN_TEAM_ID" \
+    -e GREMLIN_TEAM_SECRET="$GREMLIN_TEAM_SECRET" \
+    gremlin/gremlin daemon
+ 
 
 To start Redis now, you can simply run:
 
     $ src/redis-server
 
-You can try interacting with it by starting another terminal and typing:
+Run ChaosQuest to start the game: 
 
-    $ redis-<version>/src/redis-cli
-    redis> set foo bar
-    OK
-    redis> get foo
-    "bar"
+    $ node server/js/main.js
+
+
 
 Node.js, Memcached, and Redis for Fedora 16+ and RHEL/CentOS/SL 6.x
 -------------------------------------------------------------------
