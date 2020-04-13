@@ -61,10 +61,11 @@ Then install the Node.js dependencies by running:
     $ npm config set registry http://registry.npmjs.org/
     $ npm install -d
     
-Before starting the ChaosQuest server, you must start Redis. 
+Before starting the ChaosQuest server, you must start Redis: 
+
     $ sudo systemctl start redis-server
 
-Then start the server by running:
+Then start the game server by running:
 
     $ node server/js/main.js
 
