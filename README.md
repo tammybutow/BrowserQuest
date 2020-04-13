@@ -103,9 +103,11 @@ Gremlin installed through Docker for Mac is known to work:
 2. Navigate to [https://gremlin.com/buttons](gremlin.com/buttons) and sign up for a Gremlin account
 3. You will find your Gremlin Team ID and Secret in [Settings](https://app.gremlin.com/settings/teams).
 
+Set your environment variables for Gremlin:
+
     $ export GREMLIN_TEAM_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
     $ export GREMLIN_TEAM_SECRET=XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX
-    
+
 Run Gremlin in a Docker container after installing Docker for Mac:
 
     $ docker run -d --net=host \
