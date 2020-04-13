@@ -84,56 +84,6 @@ That means its working.  There should not be any warnings or errors.
 Using a browser, connect to port 8000 of the server entered above.  The
 BrowserQuest start page should appear, and the game should work.
 
-Mac OS X
---------
-
-Node.js, Memcached, and Redis installed through Homebrew are known to work:
-
-    $ brew install node redis memcached
-    $ ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
-    $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-    $ git clone git://github.com/tammybutow/ChaosQuest.git
-    $ cd ChaosQuest
-    $ npm install -d
-
-Gremlin installed through Docker for Mac is known to work:
- 
-    
-1. You will need to set your Gremlin Team ID and Secret as environment variables
-2. Navigate to [https://gremlin.com/buttons](gremlin.com/buttons) and sign up for a Gremlin account
-3. You will find your Gremlin Team ID and Secret in [Settings](https://app.gremlin.com/settings/teams).
-
-Set your environment variables for Gremlin:
-
-    $ export GREMLIN_TEAM_ID=XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-    $ export GREMLIN_TEAM_SECRET=XXXXXXXX-XXXX-XXXX-XXXXXXXXXXXX
-
-Run Gremlin in a Docker container after installing Docker for Mac:
-
-    $ docker run -d --net=host \
-    --cap-add=NET_ADMIN --cap-add=SYS_BOOT --cap-add=SYS_TIME \
-    --cap-add=KILL \
-    -v $PWD/var/lib/gremlin:/var/lib/gremlin \
-    -v $PWD/var/log/gremlin:/var/log/gremlin \
-    -v /var/run/docker.sock:/var/run/docker.sock \
-    -e GREMLIN_TEAM_ID="$GREMLIN_TEAM_ID" \
-    -e GREMLIN_TEAM_SECRET="$GREMLIN_TEAM_SECRET" \
-    -e GREMLIN_CLIENT_TAGS="type=game-server,app=chaosquest" \
-    gremlin/gremlin daemon
- 
-
-To check Redis is now running, you can simply run:
-
-    $ redis-cli ping
-    
-If Redis is running you should see the result *PONG*
-
-Now, run the following to start ChaosQuest: 
-
-    $ node server/js/main.js
-    
-You can now view ChaosQuest in your browser @ http://localhost:8000  
-
 
 Node.js, Memcached, and Redis for Fedora 16+ and RHEL/CentOS/SL 6.x
 -------------------------------------------------------------------
