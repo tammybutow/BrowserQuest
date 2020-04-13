@@ -130,7 +130,8 @@ If Redis is running you should see the result *PONG*
 Now, run the following to start ChaosQuest: 
 
     $ node server/js/main.js
-
+    
+You can now view ChaosQuest in your browser @ http://localhost:8000  
 
 
 Node.js, Memcached, and Redis for Fedora 16+ and RHEL/CentOS/SL 6.x
