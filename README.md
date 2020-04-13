@@ -121,11 +121,13 @@ Run Gremlin in a Docker container after installing Docker for Mac:
     gremlin/gremlin daemon
  
 
-To start Redis now, you can simply run:
+To check Redis is now running, you can simply run:
 
-    $ src/redis-server
+    $ redis-cli ping
+    
+If Redis is running you should see the result *PONG*
 
-Run ChaosQuest to start the game: 
+Now, run the following to start ChaosQuest: 
 
     $ node server/js/main.js
 
