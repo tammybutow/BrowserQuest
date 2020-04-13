@@ -37,7 +37,7 @@ Ubuntu
     $ sudo apt-get update
     $ sudo apt-get upgrade
     $ sudo apt-get install g++ make memcached libncurses5 redis-server git -y
-    $ curl -sL https://deb.nodesource.com/setup | sudo bash -
+    $ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
     $ sudo apt-get install nodejs
     $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9CDB294B29A5B1E2E00C24C022E8EF3461A50EF6
     $ sudo apt-get update && sudo apt-get install -y gremlin gremlind
