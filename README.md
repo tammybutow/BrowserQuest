@@ -1,38 +1,35 @@
-BrowserQuest
+ChaosQuest
 ============
 
-[![Build Status](https://travis-ci.org/browserquest/BrowserQuest.png)](https://travis-ci.org/browserquest/BrowserQuest) [![Dependency Status](https://gemnasium.com/browserquest/BrowserQuest.png)](https://gemnasium.com/browserquest/BrowserQuest)
+ChaosQuest is a HTML5/JavaScript game to be used to showcase the practice of Chaos Engineering in a multiplayer Game Development environment. 
 
-[BrowserQuest](http://browserquest-teambq.rhcloud.com:8000) is a HTML5/JavaScript multiplayer game experiment.
+It has four major parts:
 
-It has three major parts:
-
+* the chaos engineering side, which runs using Gremlin
 * the server side, which runs using Node.js
 * the client side, which runs using javascript in your browser
 * the database side, which runs using Redis
+
 
 Browser Support
 ---------------
 
 * Firefox - Works well.
 * Chrome - Works well.
-* Chromium - Works well.
-* Opera 15.x - Works well.
-* Opera 12.16 - Background music doesn't play.  Everything else works (Very slow though).
-* Safari 6.x - Background music doesn't play.  Everything else works well.
-* IE 10.x - Doesn't work.  Other versions untested.
+
 
 How to get it going
 -------------------
 
 Getting the server up and running is pretty easy. You need to have the following installed:
 
-* Node.js ← Versions 0.8.x-0.10.x work.  **Do not use 0.6.x, it [does not work](https://github.com/senchalabs/connect/issues/858).**
+* Node.js ← Versions 0.8.x-0.10.x work.  
 * gcc-c++ ← optional.  Not needed on windows.
 * GNU make ← optional.  Not needed on windows.
 * Memcached ← optional. This is needed to enable metrics.
 * zlib-devel ← this is the Fedora/RHEL package name, others may be sightly different.  Not needed on windows.
 * Redis server ← this is needed for the game to connect to the backend database.
+
 
 Ubuntu
 ------
@@ -42,18 +39,29 @@ Ubuntu
     $ sudo apt-get install g++ make memcached libncurses5 redis-server git -y
     $ curl -sL https://deb.nodesource.com/setup | sudo bash -
     $ sudo apt-get install nodejs
+    $ apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9CDB294B29A5B1E2E00C24C022E8EF3461A50EF6
+    $ sudo apt-get update && sudo apt-get install -y gremlin gremlind
+    $ gremlin init
+    
+Enter your Gremlin Team ID and Secret: 
+
+1. Navigate to [https://gremlin.com/buttons](gremlin.com/buttons) and sign up for a Gremlin account
+2. You will find your Gremlin Team ID and Secret in [Settings](https://app.gremlin.com/settings/teams).
+3. Paste these two credentials into your terminal. 
+    
 
 Clone the git repo:
 
-    $ git clone git://github.com/browserquest/BrowserQuest.git
-    $ cd BrowserQuest
+    $ git clone git://github.com/tammybutow/ChaosQuest.git
+    $ cd ChaosQuest
 
 Then install the Node.js dependencies by running:
 
     $ npm config set registry http://registry.npmjs.org/
     $ npm install -d
     
-Before starting the BrowserQuest server, you must start Redis. In Windows, you can simply run `redis-server.exe` in your `redis\bin\release` directory.
+Before starting the ChaosQuest server, you must start Redis. 
+    $ sudo systemctl start redis-server
 
 Then start the server by running:
 
@@ -84,8 +92,8 @@ Node.js, Memcached, and Redis installed through Homebrew are known to work:
     $ brew install node redis memcached
     $ ln -sfv /usr/local/opt/redis/*.plist ~/Library/LaunchAgents
     $ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.redis.plist
-    $ git clone git://github.com/browserquest/BrowserQuest.git
-    $ cd BrowserQuest
+    $ git clone git://github.com/tammybutow/ChaosQuest.git
+    $ cd ChaosQuest
     $ npm install -d
     $ node server/js/main.js
 
@@ -128,10 +136,10 @@ Start Redis and Memcached by running:
     $ sudo service redis start
     $ sudo service memcached start
 
-Now continue on with the normal steps to clone the BrowserQuest git repo, and start up BrowserQuest:
+Now continue on with the normal steps to clone the ChaosQuest git repo, and start up ChaosQuest:
 
-    $ git clone git://github.com/browserquest/BrowserQuest.git
-    $ cd BrowserQuest
+    $ git clone git://github.com/tammybutow/ChaosQuest.git
+    $ cd ChaosQuest
     $ npm install -d
     $ node server/js/main.js
 
@@ -145,15 +153,20 @@ extensions for npm modules installed.
 You can download an experimental Win32/64 version of Redis
 from here: http://redis.io/download
 
+To start Redis on Windows, you can simply run `redis-server.exe` in your `redis\bin\release` directory.
+
 You can download the latest version of Memcached for Win32/64 from here:
 http://blog.elijaa.org/index.php?post/2010/10/15/Memcached-for-Windows&similar
 
-Deploying BrowserQuest
+Deploying ChaosQuest
 ----------------------
 
-Currently, BrowserQuest can run on the following PAAS (Platform as a Service) providers:
+Currently, ChaosQuest can run on the following providers:
 * [OpenShift](https://www.openshift.com)
 * [Heroku](https://www.heroku.com)
+* [DigitalOcean](https://www.digitalocean.com)
+* [AWS](https://www.aws.com)
+* [Azure](https://www.azure.com)
 
 ### Instructions for OpenShift ###
 1. Follow the instructions to get started with the OpenShift client tools [here](https://www.openshift.com/get-started).
@@ -171,13 +184,13 @@ Currently, BrowserQuest can run on the following PAAS (Platform as a Service) pr
           http://cartreflect-claytondev.rhcloud.com/reflect?github=smarterclayton/openshift-redis-cart \
           --app <app-name>
 
-4. Add the BrowserQuest repository, and pull its contents with the following commands:
+4. Add the ChaosQuest repository, and pull its contents with the following commands:
 
-        $ git remote add github https://github.com/browserquest/BrowserQuest.git
+        $ git remote add github https://github.com/tammybutow/ChaosQuest.git
         $ git fetch github
         $ git reset --hard github/master
         
-5. Copy the BrowserQuest config file with the following command:
+5. Copy the ChaosQuest config file with the following command:
 
         $ cp server/config.json server/config_local.json
     
@@ -193,12 +206,12 @@ On the line that reads `"production": "heroku",`, change `"heroku"` to `"openshi
 
         $ git push -f
 
-Congratulations! You have now deployed BrowserQuest to Openshift! You can see the url of your instance by running
+Congratulations! You have now deployed ChaosQuest to Openshift! You can see the url of your instance by running
 
 
     $ rhc app show <app-name>
 
-Visit the url shown by the above command to see BrowserQuest running. You will need to add ":8000" to the end. Use the url below as a guide:
+Visit the url shown by the above command to see ChaosQuest running. You will need to add ":8000" to the end. Use the url below as a guide:
 
     http://your_openshift_browserquest_url.rhcloud.com:8000/
     
@@ -214,7 +227,7 @@ Where [NAME] is an optional name for your application (Heroku will automatically
 
 3. Sign up for a Redis provider, such as [Redis To Go](https://redistogo.com), or host a Redis instance yourself.
 
-4. Run the following commands to allow BrowserQuest to run on Heroku:
+4. Run the following commands to allow ChaosQuest to run on Heroku:
 
         $ heroku config:add HEROKU=true
         $ heroku config:add HEROKU_REDIS_HOST=[REDIS_HOST]
@@ -242,22 +255,6 @@ In this case, your REDIS_HOST is `something.redistogo.com`, your REDIS_PORT is `
 Congratulations! You have now deployed BrowserQuest to Heroku! To open BrowserQuest in your browser, run `heroku open`.
 
 
-Documentation
--------------
-
-Lots of useful info on the [wiki](https://github.com/browserquest/BrowserQuest/wiki).
-
-Mailing List
-------------
-
-The new mailing list for development is [here](https://mail.mozilla.org/listinfo/browserquest). ([archives](https://mail.mozilla.org/pipermail/browserquest/))
-
-The old mailing list on librelist.com is no longer used.  Its archives are online [here](http://librelist.com/browser/browserquest/).
-
-IRC Channel
------------
-
-\#browserquest on irc.mozilla.org
 
 License
 -------
@@ -267,7 +264,15 @@ See the LICENSE file for details.
 
 Credits
 -------
-Originally created by [Little Workshop](http://www.littleworkshop.fr):
+ChaosQuest 
+
+* Tammy Butow - [@tammybutow](http://www.twitter.com/tammybutow)
+
+
+
+This is a fork of an open-source game called BrowserQuest by littleworkshop/mozilla. 
+
+BrowserQuest originally created by [Little Workshop](http://www.littleworkshop.fr):
 
 * Franck Lecollinet - [@whatthefranck](http://twitter.com/whatthefranck)
 * Guillaume Lecollinet - [@glecollinet](http://twitter.com/glecollinet)
