@@ -118,6 +118,7 @@ Run Gremlin in a Docker container after installing Docker for Mac:
     -v /var/run/docker.sock:/var/run/docker.sock \
     -e GREMLIN_TEAM_ID="$GREMLIN_TEAM_ID" \
     -e GREMLIN_TEAM_SECRET="$GREMLIN_TEAM_SECRET" \
+    -e GREMLIN_CLIENT_TAGS="type=game-server,app=chaosquest"
     gremlin/gremlin daemon
  
 
