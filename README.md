@@ -1,7 +1,9 @@
 ChaosQuest
 ============
 
-ChaosQuest is a HTML5/JavaScript team building game. It can be used to showcase and teach the practice of Chaos Engineering in a fun multiplayer Game Development environment. 
+ChaosQuest is a HTML5/JavaScript team building game. It can be used to showcase and teach the practice of Chaos Engineering in a fun multiplayer Game Development environment. Gremlin will automatically run attacks against ChaosQuest. 
+
+Play it here: http://ec2-3-92-198-97.compute-1.amazonaws.com:8000/
 
 It has four major parts:
 
@@ -18,8 +20,8 @@ Browser Support
 * Chrome - Works well.
 
 
-How to get it going
--------------------
+How to get it going yourself
+----------------------------
 
 Getting the server up and running is pretty easy. You need to have the following installed:
 
