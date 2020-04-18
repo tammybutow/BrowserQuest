@@ -902,6 +902,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                 });
 
                 self.player.onStep(function() {
+                    self.updateExpBar();
                     if(self.player.hasNextStep()) {
                         self.registerEntityDualPosition(self.player);
                     }
