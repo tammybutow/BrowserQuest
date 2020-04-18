@@ -46,7 +46,7 @@ Ubuntu
     
 Enter your Gremlin Team ID and Secret: 
 
-1. Navigate to [https://gremlin.com/buttons](gremlin.com/buttons) and sign up for a Gremlin account
+1. Navigate to [https://gremlin.com/buttons](https://gremlin.com/buttons) and sign up for a Gremlin account
 2. You will find your Gremlin Team ID and Secret in [Settings](https://app.gremlin.com/settings/teams).
 3. Paste these two credentials into your terminal. 
     
