@@ -3,8 +3,6 @@ ChaosQuest
 
 ChaosQuest is a HTML5/JavaScript team building game. It can be used to showcase and teach the practice of Chaos Engineering in a fun multiplayer Game Development environment. Gremlin will automatically run attacks against ChaosQuest. 
 
-Play it here: http://ec2-3-92-198-97.compute-1.amazonaws.com:8000/
-
 It has four major parts:
 
 * the chaos engineering side, which runs using Gremlin
@@ -17,6 +15,8 @@ Gremlin will run the following automated random attacks on ChaosQuest
 * Latency - 3 times a day
 * Packet Loss - 3 times a day
 * Memory - 3 times a day
+
+Play it here: http://ec2-3-92-198-97.compute-1.amazonaws.com:8000/
 
 
 Browser Support
