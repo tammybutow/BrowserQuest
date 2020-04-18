@@ -1,7 +1,7 @@
 ChaosQuest
 ============
 
-ChaosQuest is a HTML5/JavaScript game to be used to showcase the practice of Chaos Engineering in a multiplayer Game Development environment. 
+ChaosQuest is a HTML5/JavaScript team building game. It can be used to showcase and teach the practice of Chaos Engineering in a fun multiplayer Game Development environment. 
 
 It has four major parts:
 
