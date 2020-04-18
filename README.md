@@ -12,6 +12,12 @@ It has four major parts:
 * the client side, which runs using javascript in your browser
 * the database side, which runs using Redis
 
+Gremlin will run the following automated random attacks on ChaosQuest
+* CPU - 3 times a day 
+* Latency - 3 times a day
+* Packet Loss - 3 times a day
+* Memory - 3 times a day
+
 
 Browser Support
 ---------------
