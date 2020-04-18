@@ -1,8 +1,8 @@
 {
-  "name": "BrowserQuest",
+  "name": "ChaosQuest",
   "repository": {
     "type": "git",
-    "url": "https://github.com/browserquest/BrowserQuest.git"
+    "url": "https://github.com/chaosquest/ChaosQuest.git"
   },
   "version": "0.0.1",
   "dependencies": {

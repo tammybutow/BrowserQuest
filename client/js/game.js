@@ -844,7 +844,7 @@ function(InfoManager, BubbleManager, Renderer, Map, Animation, Sprite, AnimatedT
                                             self.player.getSpriteName(),
                                             self.player.getWeaponName(),
                                             self.player.getGuild());
-                    self.showNotification("Welcome to BrowserQuest!");
+                    self.showNotification("Welcome to ChaosQuest!");
                 } else {
                     self.showNotification("Welcome Back. You are level " + self.player.level + ".");
                     self.storage.setPlayerName(name);

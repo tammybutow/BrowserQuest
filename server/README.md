@@ -1,7 +1,7 @@
-BrowserQuest server documentation
+ChaosQuest server documentation
 =================================
 
-To configure and run the BrowserQuest server, please follow the instructions in the top directory of this repository.
+To configure and run the ChaosQuest server, please follow the instructions in the top directory of this repository.
 
 
 Monitoring

@@ -1,0 +1,9 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2020-04-13 16:46:34 - Daemon is using token auth with team ID : 87a53dbf-adea-5351-9317-94536a217dd3 and Gremlin Identifier : 192.168.65.3
+2020-04-13 16:46:34 - Metadata set for [ gremlin-client-version: 2.14.4 ]
+2020-04-13 16:46:34 - Metadata set for [ os-type: Linux ]
+2020-04-13 16:46:34 - Metadata set for [ os-name: Ubuntu ]
+2020-04-13 16:46:34 - Metadata set for [ local-ip: 192.168.65.3 ]
+2020-04-13 16:46:34 - Metadata set for [ local-hostname: docker-desktop ]
+2020-04-13 16:46:34 - Daemon already has valid session, skip auth and only send tags
+2020-04-13 16:46:35 - Successfully registered Gremlin daemon with control plane

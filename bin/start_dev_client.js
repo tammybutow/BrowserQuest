@@ -15,4 +15,4 @@ app.use(function(err, req, res, next){});
 // The tcp port to listen on
 app.listen(port);
 
-console.log('BrowserQuest client server started on port '+port);
+console.log('ChaosQuest client server started on port '+port);

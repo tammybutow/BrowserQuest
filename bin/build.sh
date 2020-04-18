@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Script to generate an optimized client build of BrowserQuest
+# Script to generate an optimized client build of ChaosQuest
 
 TOPLEVELDIR="`dirname $0`/.."
 BUILDDIR="$TOPLEVELDIR/client-build"

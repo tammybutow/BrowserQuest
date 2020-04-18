@@ -41,7 +41,7 @@ function main(config) {
         }
     }, 1000);
 
-    log.info("Starting BrowserQuest game server...");
+    log.info("Starting ChaosQuest game server...");
     var selector = DatabaseSelector(config);
     databaseHandler = new selector(config);
 

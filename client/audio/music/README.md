@@ -1,7 +1,7 @@
 Background music
 ================
 
-All of the music in BrowserQuest comes from Creative Commons
+All of the music in ChaosQuest comes from Creative Commons
 [Attribution 3.0 Unported (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/) sources.
 
 * [Aaron Krogh](http://soundcloud.com/aaron-anderson-11) - [beach](http://soundcloud.com/aaron-anderson-11/310-world-map-loop)

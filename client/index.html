@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<!--
+ChaosQuest
+ -->
 <html lang="en">
 	<head>
         <meta charset="utf-8">
@@ -8,10 +11,10 @@
         <link rel="icon" type="image/png" href="img/common/favicon.png">
         <meta property="og:title" content="ChaosQuest">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="http://browserquest.mozilla.org/">
-        <meta property="og:image" content="http://browserquest.mozilla.org/img/common/promo-title.jpg">
+        <meta property="og:url" content="http://chaosquest.mozilla.org/">
+        <meta property="og:image" content="http://chaosquest.mozilla.org/img/common/promo-title.jpg">
         <meta property="og:site_name" content="ChaosQuest">
-        <meta property="og:description" content="Play ChaosQuest">
+        <meta property="og:description" content="Play Mozilla's ChaosQuest, an HTML5 massively multiplayer game demo powered by WebSockets!">
         <link rel="stylesheet" href="css/main.css" type="text/css">
         <link rel="stylesheet" href="css/achievements.css" type="text/css">
 
@@ -41,12 +44,13 @@
     <!--[if lt IE 9]>
 	<body class="intro upscaled">
     <![endif]-->
+    <a href="https://github.com/tammybutow/ChaosQuest"></a>
 	<body class="intro">
 	    <noscript>
 	       <div class="alert">
 	           You need to enable JavaScript to play ChaosQuest.
 	       </div>
-	    </noscript> 
+	    </noscript>
 	    <div id="intro">
 	        <h1 id="logo">
 	           <span id="logosparks">
@@ -151,7 +155,8 @@
          	               <span class="right-ornament"></span>
                         </h1>
                         <p id="game-desc">
-                            ChaosQuest is a multiplayer Chaos Engineering game 
+                            ChaosQuest is a multiplayer game inviting you to explore a
+                            world of adventure from your Web browser.
                         </p>
                         <div class="left">
                             <div class="img"></div>
@@ -160,6 +165,7 @@
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
+                                <a target="_blank" class="clickable" href="http://hacks.mozilla.org/2012/03/chaosquest/">Learn more</a> about the technology
                             </span>
                         </div>
                         <div class="right">
@@ -169,7 +175,7 @@
                             </p>
                             <span class="link">
                                 <span class="ext-link"></span>
-                                <a target="_blank" class="clickable" href="http://github.com/tammybutow/chaosquest">Grab the source</a> on Github
+                                <a target="_blank" class="clickable" href="http://github.com/chaosquest/ChaosQuest">Grab the source</a> on Github
                             </span>
                         </div>
                       <div id="close-about">
@@ -198,7 +204,7 @@
           	               <span class="right-ornament"></span>
                          </h1>
                          <p>
-                             ChaosQuest stores your character name, game achievements and equipment in your browser.
+                             ChaosQuest stores your character name, game achievements and equipment in your browser and does not send them to Mozilla. We do collect server log data (such as IP address) as well as web analytics data. We handle info we receive about you as explained in our <a class="clickable" target="_blank" href="http://www.mozilla.org/en-US/privacy-policy">Privacy Policy</a>.
                          </p>
  	                    <div id="close-legal">
  	                        <span>- click anywhere to close -</span>
@@ -323,6 +329,20 @@
 		    </div>
 		</div>
 		<footer>
+		    <div id="sharing" class="clickable">
+		      Share this on
+              <a href="http://twitter.com/share?url=http%3A%2F%2Fchaosquest.mozilla.org&amp;text=Mozilla%27s%20ChaosQuest%3A%20HTML5%20massively%20multiplayer%20adventure%20game%20%23demo%20%23websockets&amp;related=glecollinet:Creators%20of%20ChaosQuest%2Cwhatthefranck" class="twitter"></a>
+              <a href="http://www.facebook.com/share.php?u=http://chaosquest.mozilla.org/" class="facebook"></a>
+		    </div>
+		    <div id="privacy-link" class="clickable">
+		      <span class="dash">&ndash;</span> <span id="toggle-legal">Privacy</span>
+		    </div>
+		    <div id="legal-link" class="clickable">
+		      <span class="dash">&ndash;</span> <a class="clickable" target="_blank" href="http://www.mozilla.org/en-US/about/legal.html">Legal notices</a>
+		    </div>
+		    <div id="credits-link" class="clickable">
+		      <span class="dash">&ndash;</span> <span id="toggle-credits">Credits</span>
+		    </div>
 		</footer>
 
 		<ul id="page-tmpl" class="clickable" style="display:none">

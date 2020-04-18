@@ -19,7 +19,7 @@ if(!mode){
 if(!source || (mode!="direct" && mode!="both" && mode!="client" && mode!="server") || (mode!="direct" && !destination)) {
     util.puts("Usage : ./exportmap.js tiled_json_file [mode] [destination]");
     util.puts("Optional parameters : mode & destination. Values:");
-    util.puts("    - \"direct\" (default) → updates current server and map files (WARNING: SHOULD ONLY BE CALLED FROM BrowserQuest/tools/maps !!!);");
+    util.puts("    - \"direct\" (default) → updates current server and map files (WARNING: SHOULD ONLY BE CALLED FROM ChaosQuest/tools/maps !!!);");
     util.puts("    - \"client destination_file\" → will generate destination_file.js and destination_file.json for client side map;");
     util.puts("    - \"server destination_file.json\" → will generate destination_file.json for server side map;");
     util.puts("    - \"both destination_directory\" → will generate world_client.js, world_client.json and world_server.json in directory.");

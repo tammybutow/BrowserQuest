@@ -9,21 +9,21 @@ branches:
 deploy:
   - provider: openshift
     on:
-      repo: browserquest/BrowserQuest
+      repo: chaosquest/ChaosQuest
       node: "0.10"
     user: "aa1ronham@gmail.com"
     password:
     - secure: "D4F+CKpbIG1WvJJQNYiHrWwFoNNouOPQgE4dV4h1AgTCRiSyV/x3nhn4LA9PvMPeQ8zranY8MCL6mEvOCzahd+NCbLIiauBeBlIazmySXei8OmESGr2lasEm+xDbOcM58uB/g9ascWZSSgcLTUK7TeZw64iO6A8XEBdsv+5u2Uo="
-    app: browserquest
+    app: chaosquest
     domain: teambq
   - provider: heroku
     on:
-      repo: browserquest/BrowserQuest
+      repo: chaosquest/ChaosQuest
       node: "0.10"
     api_key:
     - secure: "amcWFxiuwlBQLQoqAjWEHo18KVKHtRJg9CuaZpQVQS12IKnzbaG1lIWKaPjZ8HFhQ+n46xOxt2YFuRGG+WRcoxb0wu8MdqOUB6fEFMOI3K/3o0gOHlxvsgFs39bphiS7dZG9Sjyg8SoZ/L2SPtPYJyDGkA5nZvKYceChAla252s="
-    app: browserquest
+    app: chaosquest
 
 
 notifications:
-  irc: "irc.synirc.net#browserquest"
+  irc: "irc.synirc.net#chaosquest"

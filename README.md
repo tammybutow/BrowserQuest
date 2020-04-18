@@ -69,11 +69,11 @@ Then start the game server by running:
 
     $ node server/js/main.js
 
-The BrowserQuest server should start, showing output like this:
+The ChaosQuest server should start, showing output like this:
 
     $ node server/js/main.js
     This server can be customized by creating a configuration file named: ./server/config_local.json
-    [Thu Sep 13 2012 17:16:27 GMT-0400 (EDT)] INFO Starting BrowserQuest game server...
+    [Thu Sep 13 2012 17:16:27 GMT-0400 (EDT)] INFO Starting ChaosQuest game server...
     [Thu Sep 13 2012 17:16:27 GMT-0400 (EDT)] INFO world1 created (capacity: 200 players).
     [Thu Sep 13 2012 17:16:27 GMT-0400 (EDT)] INFO world2 created (capacity: 200 players).
     [Thu Sep 13 2012 17:16:27 GMT-0400 (EDT)] INFO world3 created (capacity: 200 players).
@@ -84,7 +84,7 @@ The BrowserQuest server should start, showing output like this:
 That means its working.  There should not be any warnings or errors.
 
 Using a browser, connect to port 8000 of the server entered above.  The
-BrowserQuest start page should appear, and the game should work.
+ChaosQuest start page should appear, and the game should work.
 
 
 Node.js, Memcached, and Redis for Fedora 16+ and RHEL/CentOS/SL 6.x
@@ -130,6 +130,6 @@ ChaosQuest
 
 
 
-This is a fork of an open-source game called BrowserQuest by littleworkshop/mozilla. 
+This is a fork of an open-source game called ChaosQuest by littleworkshop/mozilla. 
 
-BrowserQuest originally created by [Little Workshop](http://www.littleworkshop.fr)
+ChaosQuest originally created by [Little Workshop](http://www.littleworkshop.fr)
