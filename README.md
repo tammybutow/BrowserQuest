@@ -11,6 +11,16 @@ It has four major parts:
 * the database side, which runs using Redis
 
 
+Recommended Chaos Engineering Scenarios To Run With Your Team
+-------------------------------------------------------------
+"Limbo" - all players unable to revive if they die - process killer attack on redis-server (+kill children)
+"Slow Down" - slow down the movements of all players - latency attack 1000 ms for 120 seconds
+"You're Stuck" - all players can’t move - latency attack 3000 ms for 120 seconds
+"Peace Mode" - all players are unable to fight - packet loss 70% for 240 seconds
+"Booted Out" - all players will be disconnected - process killer attack on memcached (+kill children)
+"Crash" - the game will crash for all players -  memory consumption attack 4 min 8gb
+
+
 Browser Support
 ---------------
 
