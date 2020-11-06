@@ -20,6 +20,8 @@ Recommended Chaos Engineering Scenarios To Run With Your Team
 * "Booted Out" - all players will be disconnected - process killer attack on memcached (+kill children)
 * "Crash" - the game will crash for all players -  memory consumption attack 4 min 8gb
 
+See an example on twitch here: 
+https://www.twitch.tv/videos/597214999
 
 Browser Support
 ---------------
