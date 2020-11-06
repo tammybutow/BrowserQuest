@@ -3,6 +3,8 @@ ChaosQuest
 
 ChaosQuest is a HTML5/JavaScript team building game. It can be used to showcase and teach the practice of Chaos Engineering in a fun multiplayer Game Development environment. 
 
+See an example on twitch here: https://www.twitch.tv/videos/597214999
+
 It has four major parts:
 
 * the chaos engineering side, which runs using Gremlin
@@ -20,8 +22,7 @@ Recommended Chaos Engineering Scenarios To Run With Your Team
 * "Booted Out" - all players will be disconnected - process killer attack on memcached (+kill children)
 * "Crash" - the game will crash for all players -  memory consumption attack 4 min 8gb
 
-See an example on twitch here: 
-https://www.twitch.tv/videos/597214999
+
 
 Browser Support
 ---------------
