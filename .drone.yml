@@ -7,5 +7,5 @@ steps:
   image: alpine
   commands:
   - echo "It worked!"
-  - sh (script: "curl -s -H 'Content-Type: application/json' -H 'X-Gremlin-Agent: jenkins' -H 'Authorization: Key ${GREMLIN_API_KEY}' https://api.gremlin.com/v1/attacks/new --data '{ \"command\": { \"type\": \"cpu\", \"args\": [\"-c\", \"$CPU_CORE\", \"-l\", \"$CPU_LENGTH\", \"-p\", \"$CPU_PERCENT\"] },\"target\": { \"type\": \"Exact\", \"hosts\" : { \"ids\": [\"$TARGET_IDENTIFIER\"] } } }' --compressed",returnStdout: true).trim()
   - echo "see your attack at https://app.gremlin.com/attacks/${ATTACK_ID}"
+  - sh (script: "curl -s -H 'Content-Type: application/json' -H 'X-Gremlin-Agent: jenkins' -H 'Authorization: Key ${GREMLIN_API_KEY}' https://api.gremlin.com/v1/attacks/new --data '{"target":{"type":"Random","hosts":"all","percent":100},"command":{"type":"cpu","commandType":"CPU","args":["-l","60","-c","1","-p","30"]}}'' --compressed",returnStdout: true).trim()
