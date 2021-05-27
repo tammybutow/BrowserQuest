@@ -47,15 +47,15 @@ Getting the server up and running is pretty easy. You need to have the following
 Ubuntu
 ------
 
-    $ sudo apt-get update
-    $ sudo apt-get upgrade
-    $ sudo apt-get install g++ make memcached libncurses5 redis-server git -y
-    $ curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-    $ sudo apt-get install nodejs -y
-    $ echo "deb https://deb.gremlin.com/ release non-free" | sudo tee /etc/apt/sources.list.d/gremlin.list
-    $ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9CDB294B29A5B1E2E00C24C022E8EF3461A50EF6
-    $ sudo apt-get update && sudo apt-get install -y gremlin gremlind
-    $ gremlin init
+     sudo apt-get update
+     sudo apt-get upgrade
+     sudo apt-get install g++ make memcached libncurses5 redis-server git -y
+     curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+     sudo apt-get install nodejs -y
+     echo "deb https://deb.gremlin.com/ release non-free" | sudo tee /etc/apt/sources.list.d/gremlin.list
+     sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 9CDB294B29A5B1E2E00C24C022E8EF3461A50EF6
+     sudo apt-get update && sudo apt-get install -y gremlin gremlind
+     gremlin init
     
 Enter your Gremlin Team ID and Secret: 
 
@@ -71,16 +71,16 @@ Clone the git repo:
 
 Then install the Node.js dependencies by running:
 
-    $ npm config set registry http://registry.npmjs.org/
-    $ npm install -d
+     npm config set registry http://registry.npmjs.org/
+     npm install -d
     
 Before starting the ChaosQuest server, you must start Redis: 
 
-    $ sudo systemctl start redis-server
+     sudo systemctl start redis-server
 
 Then start the game server by running:
 
-    $ node server/js/main.js
+     node server/js/main.js
 
 The ChaosQuest server should start, showing output like this:
 
