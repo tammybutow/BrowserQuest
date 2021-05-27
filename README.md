@@ -66,8 +66,8 @@ Enter your Gremlin Team ID and Secret:
 
 Clone the git repo:
 
-    $ git clone git://github.com/tammybutow/ChaosQuest.git
-    $ cd ChaosQuest
+     git clone git://github.com/tammybutow/ChaosQuest.git
+     cd ChaosQuest
 
 Then install the Node.js dependencies by running:
 
