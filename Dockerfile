@@ -15,4 +15,4 @@ RUN npm install
 COPY . /app
 EXPOSE 8000
 EXPOSE 6379
-CMD concurrently "/usr/bin/redis-server --bind '0.0.0.0'" "sleep 5s; node /app/src/server.js" 
+CMD concurrently "/usr/bin/redis-server --bind '0.0.0.0'" "sleep 5s; node /app/server.js" 
